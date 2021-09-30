@@ -1,4 +1,4 @@
-# think-nest
+ # Think Nest - REST API
 This is a fun project and i like to make it bigger
 
 ## Find me around the web 🌎: <img align="left" width="300" height="140" src="https://raw.githubusercontent.com/ferdianar/ferdianar/main/nest.png"></a>
