@@ -20,19 +20,21 @@ async function captureScreenshot() {
         // set viewport width and height
         await page.setViewport({ width: 1440, height: 800 });
 
-        await page.goto("https://web.facebook.com/?");
+        // await page.goto("https://web.facebook.com/?");
 
         // await page.type('input[name="domain"]', 'demo')
         // await page.type('input[name="username"]', 'demo')
         // await page.type('input[name="password"]', 'asdfghjkl')
         // await page.type('input[name="checkbox"]', inputs => inputs.checked)
 
-        await page.type('input[name="email"]', 'luminoussx @gmail.com')
-        await page.type('input[name="pass"]', 'ferdian57387105')
+        await page.goto('https://github.com/login')
+        await page.type('#login_field', 'ferdianahmadrozikin10@gmail.com')
+        await page.type('#password', '!Ferdian57387105')
+        await page.click('[name="commit"]')
 
-        await Promise.all([
-            page.click('button[name="login"]')
-        ]);
+        // await Promise.all([
+        //     page.click('button[name="login"]')
+        // ]);
 
         // capture screenshot and store it into screenshots directory.
         await page.screenshot({ path: `./screenshots/result.jpg` });
