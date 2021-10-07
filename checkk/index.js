@@ -27,24 +27,24 @@ async function takeScreenshot() {
             document.querySelector('input[type=checkbox]').click();
         });
 
-        const el = 'button[name="loginButton"]'
-        await page.evaluate((el) => document.querySelector(el).click(), el);
+        const clickLogin = 'button[name="loginButton"]'
+        await page.evaluate((clickLogin) => document.querySelector(clickLogin).click(), clickLogin);
 
         await page.waitForTimeout(15000)
 
-        let elems = "a#reportsMenu"
-        await page.evaluate((elems) => document.querySelector(elems).click(), elems);
+        let reportElement = "a#reportsMenu"
+        await page.evaluate((reportElement) => document.querySelector(reportElement).click(), reportElement);
         await page.waitForTimeout(15000)
 
         const selectors = ".m-r-list .m-r-list__item:nth-child(5)"
-        const elemSelector = await page.$(selectors)
-        await elemSelector.click()
+        const elementSelector = await page.$(selectors)
+        await elementSelector.click()
         await page.waitForTimeout(10000)
 
-        await page.screenshot({ path: `./screenshots/filesFourth.jpg`, fullPage: false });
+        await page.screenshot({ path: `./screenshots/outputFiles.jpg`, fullPage: false });
 
         const title = await page.title()
-        console.log(`Title is ${ title }`)
+        console.log(`Page : ${ title }`)
 
         const url = await page.url()
         console.log(`URL : ${ url }`)
@@ -53,7 +53,7 @@ async function takeScreenshot() {
         console.log(`Error: ${err}`);
     } finally {
         await browser.close();
-        console.log(`Successfully captured.`);
+        console.log(`Status : Successfully captured.`);
     }
 }
 

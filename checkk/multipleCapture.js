@@ -5,6 +5,9 @@ const pages = fs.readFileSync('./checkk/pages.json', 'utf-8')
 const site = JSON.parse(pages)
 
 async function rapidScreenshot() {
+    if (!fs.existsSync("company")) {
+        fs.mkdirSync("company")
+    }
     try {
         for (let i = 0; i < site.length; i++) {
             const browser = await puppeteer.launch({
@@ -26,7 +29,7 @@ async function rapidScreenshot() {
     } catch (error) {
         console.log(`Error :  ${error}`)
     } finally {
-        console.log(`All page successfully captured`)
+        console.log(`Status : Pages successfully captured`)
     }
 }
 
