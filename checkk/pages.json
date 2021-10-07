@@ -1,17 +1,17 @@
 [{
-        "appLinks": "https://medium.com/",
-        "title": "medium"
+        "appLinks": "https://nestjs.com/",
+        "title": "nest-js"
     },
     {
         "appLinks": "https://unsplash.com/",
         "title": "unsplash"
     },
     {
-        "appLinks": "https://medium.com/",
-        "title": "medium"
+        "appLinks": "https://github.com/",
+        "title": "github"
     },
     {
-        "appLinks": "https://medium.com/",
-        "title": "medium"
+        "appLinks": "https://mui.com/",
+        "title": "material-ui"
     }
 ]
